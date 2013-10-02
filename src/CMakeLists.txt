@@ -5,7 +5,11 @@ project(gruntmaster6000)
 find_package(WPILib)
 include_directories(${WPILib_INCLUDE_DIRS})
 
-file(GLOB_RECURSE SOURCE_CODE *.cpp)
+set(SOURCE_CODE 
+  GruntMaster6000.cpp
+  OI.cpp
+  RobotMap.cpp
+)
 
 add_executable(gruntmaster6000 ${SOURCE_CODE})
 target_link_libraries(gruntmaster6000 ${WPILib_LIBRARY})
