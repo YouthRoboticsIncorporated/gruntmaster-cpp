@@ -25,7 +25,6 @@ add_sources(GruntMaster6000.cpp
   RobotMap.cpp
 )
 add_subdirectory(commands)
-add_subdirectory(components)
 add_subdirectory(subsystems)
 
 add_executable(gruntmaster6000 ${SOURCE_CODE})
