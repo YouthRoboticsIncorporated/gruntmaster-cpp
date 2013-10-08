@@ -31,5 +31,5 @@ void Shooter::fast()
     m_Back->Set(-0.4);
 }
 
-void Shooter::initDefaultCommand()
+void Shooter::InitDefaultCommand()
 {}

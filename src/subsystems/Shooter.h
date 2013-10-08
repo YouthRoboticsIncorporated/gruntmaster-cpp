@@ -13,7 +13,7 @@ class Shooter:public Subsystem {
         void stop();
         void slow();
         void fast();
-        void initDefaultCommand();
+        void InitDefaultCommand();
     
     private:
         // Motor controllers
