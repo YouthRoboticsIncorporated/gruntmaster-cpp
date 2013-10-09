@@ -8,40 +8,41 @@
 #include "RobotMap.h"
 
 // Initialise all of the peripherals
-RobotMap::RobotMap():
+RobotMap::RobotMap() {
     // Joysticks
-    joyDrv(new Joystick(1)),
-    joyOpr(new Joystick(2)),
+    joyDrv = new Joystick(1);
+    joyOpr = new Joystick(2);
     // Joystick dead zones. Default 0.05
-    JOY_DRV_DEAD_X(0.05),
-    JOY_DRV_DEAD_Y(0.05),
-    JOY_OPR_DEAD_X(0.05),
-    JOY_OPR_DEAD_Y(0.05),
+    JOY_DRV_DEAD_X = 0.05;
+    JOY_DRV_DEAD_Y = 0.05;
+    JOY_OPR_DEAD_X = 0.05;
+    JOY_OPR_DEAD_Y = 0.05;
     // Servo angles
-    OPEN_SERVO_ANGLE(30.0),
-    CLOSE_SERVO_ANGLE(0.0),
-    FIRE_PIN_SPEED(-0.5),
+    OPEN_SERVO_ANGLE = 30.0;
+    CLOSE_SERVO_ANGLE = 0.0;
+    FIRE_PIN_SPEED = -0.5;
     // Joystick buttons
-    fireButton(new JoystickButton(joyOpr, 6)),
-    slowButton(new JoystickButton(joyOpr, 7)),
-    fastButton(new JoystickButton(joyOpr, 8)),
-    stopButton(new JoystickButton(joyOpr, 1)),
-    topButton(new JoystickButton(joyOpr, 4)),
-    bottomButton(new JoystickButton(joyOpr, 2)),
+    fireButton = new JoystickButton(joyOpr, 6);
+    slowButton = new JoystickButton(joyOpr, 7);
+    fastButton = new JoystickButton(joyOpr, 8);
+    stopButton = new JoystickButton(joyOpr, 1);
+    topButton = new JoystickButton(joyOpr, 4);
+    bottomButton = new JoystickButton(joyOpr, 2);
     // Shooter motors
-    firePinMotor(new Victor(5)),
-    shooterMotorFront(new Victor(4)),
-    shooterMotorBack(new Victor(6)),
+    firePinMotor = new Victor(5);
+    shooterMotorFront = new Victor(4);
+    shooterMotorBack = new Victor(6);
 
     // Hopper servos
-    hopperServoTop(new Servo(8)),
-    hopperServoBottom(new Servo(7)),
+    hopperServoTop = new Servo(8);
+    hopperServoBottom = new Servo(7);
 
     // Sensors
     // Firing pin limit switches
-    firePinMax(new DigitalInput(8)),
-    firePinMin(new DigitalInput(7))
-{}
+    firePinMax = new DigitalInput(8);
+    firePinMin = new DigitalInput(7);
+
+}
 
 RobotMap::~RobotMap() {
     // Delete all of the instances of our peripherals

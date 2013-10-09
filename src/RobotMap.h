@@ -17,43 +17,43 @@ class RobotMap {
         ~RobotMap(); // Destructor
         // Members
         // Joysticks
-        Joystick* const joyDrv;
-        Joystick* const joyOpr;
+        static Joystick* joyDrv;
+        static Joystick* joyOpr;
         
         // Joystick dead zones
-        const double JOY_DRV_DEAD_X;
-        const double JOY_DRV_DEAD_Y;
-        const double JOY_OPR_DEAD_X;
-        const double JOY_OPR_DEAD_Y;
+        static double JOY_DRV_DEAD_X;
+        static double JOY_DRV_DEAD_Y;
+        static double JOY_OPR_DEAD_X;
+        static double JOY_OPR_DEAD_Y;
 
         // Servo angles
-        const double OPEN_SERVO_ANGLE;
-        const double CLOSE_SERVO_ANGLE;
-        const double FIRE_PIN_SPEED;
+        static double OPEN_SERVO_ANGLE;
+        static double CLOSE_SERVO_ANGLE;
+        static double FIRE_PIN_SPEED;
   
         // Button definitions
-        Button* const fireButton;
-        Button* const slowButton;
-        Button* const fastButton;
-        Button* const stopButton;
-        Button* const topButton;
-        Button* const bottomButton;
+        static Button* fireButton;
+        static Button* slowButton;
+        static Button* fastButton;
+        static Button* stopButton;
+        static Button* topButton;
+        static Button* bottomButton;
 
         // Actuator definitions
   
         // Shooter motors
-        Victor* const firePinMotor;
-        Victor* const shooterMotorFront;
-        Victor* const shooterMotorBack;
+        static Victor* firePinMotor;
+        static Victor* shooterMotorFront;
+        static Victor* shooterMotorBack;
   
         // Hopper servos
-        Servo* const hopperServoTop;
-        Servo* const hopperServoBottom;
+        static Servo* hopperServoTop;
+        static Servo* hopperServoBottom;
   
         // Sensors
         // Firing pin limit switches
-        DigitalInput* const firePinMax;
-        DigitalInput* const firePinMin;
+        static DigitalInput* firePinMax;
+        static DigitalInput* firePinMin;
     
     private:
         // No private members    
