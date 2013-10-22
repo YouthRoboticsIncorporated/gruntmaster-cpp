@@ -9,12 +9,12 @@ class ShooterSpinFast: public CommandBase {
         ~ShooterSpinFast();
         void Initialize();
         void Execute();
-        bool IsFinished();
+        bool isFinished();
     protected:
         void End();
         void Interrupted();
     private:
-        bool finnished;
+        bool finished;
 };
 
 #endif

@@ -6,18 +6,18 @@ Requires(shooter);
 } // public ShooterSpinup()
 
 void ShooterSpinFast::Initialize() {
-    finnished = false;
+    finished = false;
 }
 
 void ShooterSpinFast::Execute()
 {
     shooter->fast();
-    finnished = true;
+    finished = true;
 }
 
-bool ShooterSpinFast::IsFinished()
+bool ShooterSpinFast::isFinished()
 {
-    return finnished;
+    return finished;
 } // public boolean isFinished()
 
 void ShooterSpinFast::End() {}
