@@ -17,7 +17,7 @@ bottomServo->close ();
 finished = true;
 }
 
-bool CloseBottomServo::isFinished()
+bool CloseBottomServo::IsFinished()
 {
 	return finished || IsTimedOut() ;
 }

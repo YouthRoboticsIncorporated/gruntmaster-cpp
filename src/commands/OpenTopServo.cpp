@@ -16,7 +16,7 @@ topServo->open ();
 finished = true;
 }
 
-bool OpenTopServo::isFinished()
+bool OpenTopServo::IsFinished()
 {
 	return finished ;
 }

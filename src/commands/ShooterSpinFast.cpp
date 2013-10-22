@@ -15,7 +15,7 @@ void ShooterSpinFast::Execute()
     finished = true;
 }
 
-bool ShooterSpinFast::isFinished()
+bool ShooterSpinFast::IsFinished()
 {
     return finished;
 } // public boolean isFinished()

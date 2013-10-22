@@ -15,7 +15,7 @@ void ShooterSpinSlow::Execute()
     finished = true;
 }
 
-bool ShooterSpinSlow::isFinished()
+bool ShooterSpinSlow::IsFinished()
 {
     return finished;
 } 

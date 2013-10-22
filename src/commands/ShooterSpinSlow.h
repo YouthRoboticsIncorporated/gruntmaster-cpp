@@ -9,7 +9,7 @@ class ShooterSpinSlow: public CommandBase {
 		~ShooterSpinSlow();
 		void Initialize();
 		void Execute();
-		bool isFinished();
+		bool IsFinished();
 	protected:
 		void End();
 		void Interrupted();

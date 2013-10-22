@@ -16,7 +16,7 @@ topServo->close ();
 finished = true;
 }
 
-bool CloseTopServo::isFinished()
+bool CloseTopServo::IsFinished()
 {
 	return finished ;
 }

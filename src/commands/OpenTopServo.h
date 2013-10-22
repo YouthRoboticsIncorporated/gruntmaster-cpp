@@ -9,7 +9,7 @@ class OpenTopServo: public CommandBase {
 		~OpenTopServo();
 		void Initialize();
 		void Execute();        
-		bool isFinished();        
+		bool IsFinished();        
 	protected:
 		void End();        
 		void Interrupted();
