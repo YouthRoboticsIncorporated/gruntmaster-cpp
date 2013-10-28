@@ -1,0 +1,41 @@
+#include "GruntMaster6000.h"
+
+GruntMaster6000 :: GruntMaster6000(CommandBase* command_base_):
+	IterativeRobot ()
+	{
+		commandbase = command_base_;
+	}
+
+void GruntMaster6000 :: RobotInit()
+{
+	// instantiate the command used for the autonomous period
+	//autonomousCommand = new AutonomousCommandGroup();
+
+	// Initialize all subsystems
+    commandbase->Initialize();
+}
+  
+void GruntMaster6000 :: AutonomousInit()
+{
+	autonomousCommand->Start();
+}
+
+void GruntMaster6000 :: AutonomousPeriodic()
+{
+	Scheduler::GetInstance()->Run();
+}
+
+void GruntMaster6000 :: TeleopInit()
+{
+    autonomousCommand->Cancel();
+} // public void teleopInit()
+  
+void GruntMaster6000 :: TeleopPeriodic()
+{
+    Scheduler::GetInstance()->Run();
+} // public void operatorControl() 
+
+void GruntMaster6000 :: TestPeriodic()
+{
+    LiveWindow::GetInstance()->Run();
+} // public void testPeriodic()
