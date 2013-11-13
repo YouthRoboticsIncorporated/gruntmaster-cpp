@@ -4,12 +4,12 @@
 #include "ShooterSpinStop.h"
 #include "ShooterFire.h"
 
-AutonomousCommandGroup :: AutonomousCommandGroup(CommandBase* commandbase_)
+AutonomousCommandGroup :: AutonomousCommandGroup():
+    isFinished(false)
 {
-	commandbase = commandbase_ ;
-	Requires(commandbase->chassis);
-	Requires(commandbase->shooter);
-	Requires(commandbase->firingPin);
+	Requires(CommandBase::chassis);
+	Requires(CommandBase::shooter);
+	Requires(CommandBase::firingPin);
 	frisbeeCount = Preferences :: GetInstance()->GetInt("AUTONOMOUS_FRISBEE_COUNT", 3);
     waitTime     = Preferences :: GetInstance()->GetDouble("AUTONOMOUS_WAIT_TIME", 0.5);
     

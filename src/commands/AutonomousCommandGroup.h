@@ -7,7 +7,7 @@
 
 class AutonomousCommandGroup: public CommandGroup {
 	public:
-		AutonomousCommandGroup (CommandBase*);
+		AutonomousCommandGroup ();
 		~AutonomousCommandGroup();
 		
 		void Initialize();
@@ -17,8 +17,7 @@ class AutonomousCommandGroup: public CommandGroup {
 	private:
 		int frisbeeCount;
 		double waitTime;
-		bool isFinished = false;
-		CommandBase *commandbase;
+		bool isFinished;
 		
 };
 

@@ -1,5 +1,7 @@
 #include "GruntMaster6000.h"
 
+#include "commands/AutonomousCommandGroup.h"
+
 GruntMaster6000 :: GruntMaster6000():
 	IterativeRobot ()
 {
@@ -8,7 +10,7 @@ GruntMaster6000 :: GruntMaster6000():
 void GruntMaster6000 :: RobotInit()
 {
 	// instantiate the command used for the autonomous period
-	//autonomousCommand = new AutonomousCommandGroup();
+	autonomousCommand = new AutonomousCommandGroup;
 
 	// Initialize all subsystems
     CommandBase::init();
