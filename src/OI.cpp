@@ -9,18 +9,18 @@
 #include "commands/OpenBottomServo.h"
 #include "commands/CloseBottomServo.h"
 
-OI::OI(RobotMap* robot_map_):
-        joyDrv(robot_map_->joyDrv),
-        joyOpr(robot_map_->joyOpr)
+OI::OI():
+        joyDrv(RobotMap::joyDrv),
+        joyOpr(RobotMap::joyOpr)
 {
-    robot_map_->fastButton->WhenPressed(new ShooterSpinFast());
-    robot_map_->slowButton->WhenPressed(new ShooterSpinSlow());
-    robot_map_->fireButton->WhenPressed(new ShooterFire());
-    robot_map_->stopButton->WhenPressed(new ShooterSpinStop());
-    robot_map_->topButton->WhenActive(new OpenTopServo());
-    robot_map_->topButton->WhenInactive(new CloseTopServo());
-    robot_map_->bottomButton->WhenActive(new OpenBottomServo());
-    robot_map_->bottomButton->WhenInactive(new CloseBottomServo());
+    RobotMap::fastButton->WhenPressed(new ShooterSpinFast());
+    RobotMap::slowButton->WhenPressed(new ShooterSpinSlow());
+    RobotMap::fireButton->WhenPressed(new ShooterFire());
+    RobotMap::stopButton->WhenPressed(new ShooterSpinStop());
+    RobotMap::topButton->WhenActive(new OpenTopServo());
+    RobotMap::topButton->WhenInactive(new CloseTopServo());
+    RobotMap::bottomButton->WhenActive(new OpenBottomServo());
+    RobotMap::bottomButton->WhenInactive(new CloseBottomServo());
 }
 
   /**

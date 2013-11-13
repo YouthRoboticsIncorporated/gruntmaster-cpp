@@ -10,7 +10,8 @@ CommandBase::CommandBase(const char *name): Command(name)
     setup();
 }
 
-void CommandBase::Initialize() {
+void CommandBase::init() {
+    oi = new OI;
     SmartDashboard::PutData("SchedulerData",Scheduler::GetInstance());
     
     SmartDashboard::PutData(chassis);

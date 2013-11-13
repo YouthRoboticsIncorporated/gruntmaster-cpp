@@ -5,7 +5,6 @@
 OperatorArcadeDrive::OperatorArcadeDrive()
 {
     Requires(chassis);
-    oi = new OI(robotMap);
 }
 
 void OperatorArcadeDrive::Execute()

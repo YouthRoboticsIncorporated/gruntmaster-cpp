@@ -7,7 +7,7 @@
 
 class OI {
     public:
-        OI(RobotMap*);
+        OI();
         ~OI();
         Joystick* const getJoyDrv();
         Joystick* const getJoyOpr();

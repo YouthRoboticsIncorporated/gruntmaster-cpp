@@ -18,7 +18,7 @@ class CommandBase: public Command {
         ~CommandBase();
         
         // Methods
-        void Initialize();
+        static void init();
         
         // Members
         static RobotMap* robotMap;
@@ -28,9 +28,11 @@ class CommandBase: public Command {
         static FiringPin* firingPin;
         static Shooter* shooter;
         static TopServo* topServo;
-        
+        static OI* oi;
+    
     private:
         void setup();
+        
 };
 
 #endif

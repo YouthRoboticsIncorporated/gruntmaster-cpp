@@ -7,7 +7,7 @@
 
 class GruntMaster6000 : public IterativeRobot {
 	public:
-		GruntMaster6000(CommandBase*);
+		GruntMaster6000();
 		~GruntMaster6000();
 		void RobotInit();
 		void AutonomousInit();
@@ -18,7 +18,6 @@ class GruntMaster6000 : public IterativeRobot {
 		
 		Command* autonomousCommand;
 	private:
-		CommandBase* commandbase;
 };
 		
 #endif

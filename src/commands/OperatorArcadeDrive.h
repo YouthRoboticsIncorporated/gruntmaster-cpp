@@ -12,7 +12,6 @@ class OperatorArcadeDrive: public CommandBase
         bool IsFinished();
         void Interrupted();
     private:
-       static OI* oi; 
 };
 
 #endif

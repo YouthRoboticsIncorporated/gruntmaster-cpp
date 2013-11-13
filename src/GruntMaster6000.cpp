@@ -1,10 +1,9 @@
 #include "GruntMaster6000.h"
 
-GruntMaster6000 :: GruntMaster6000(CommandBase* command_base_):
+GruntMaster6000 :: GruntMaster6000():
 	IterativeRobot ()
-	{
-		commandbase = command_base_;
-	}
+{
+}
 
 void GruntMaster6000 :: RobotInit()
 {
@@ -12,7 +11,7 @@ void GruntMaster6000 :: RobotInit()
 	//autonomousCommand = new AutonomousCommandGroup();
 
 	// Initialize all subsystems
-    commandbase->Initialize();
+    CommandBase::init();
 }
   
 void GruntMaster6000 :: AutonomousInit()
