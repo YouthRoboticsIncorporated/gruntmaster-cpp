@@ -40,3 +40,5 @@ void GruntMaster6000 :: TestPeriodic()
 {
     LiveWindow::GetInstance()->Run();
 } // public void testPeriodic()
+
+START_ROBOT_CLASS(GruntMaster6000);
