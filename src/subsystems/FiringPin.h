@@ -7,8 +7,7 @@
 
 class FiringPin:public Subsystem {
 	public:
-		FiringPin(RobotMap*);
-		~FiringPin();
+		FiringPin();
 		void fire();
 		bool isFired();
 		bool isReset();
@@ -17,9 +16,9 @@ class FiringPin:public Subsystem {
 		void InitDefaultCommand();
 		
 	private:
-		Victor* const motor;
-		DigitalInput* const max;
-		DigitalInput* const min;
+		Victor* motor;
+		DigitalInput* max;
+		DigitalInput* min;
 		double motorSpeed;
 
 };
