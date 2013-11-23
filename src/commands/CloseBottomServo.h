@@ -7,10 +7,10 @@ class CloseBottomServo: public CommandBase {
 	public:
 		CloseBottomServo();
 		~CloseBottomServo();
+	protected:
 		void Initialize();
 		void Execute();        
 		bool IsFinished();        
-	protected:
 		void End();        
 		void Interrupted();
 	private:

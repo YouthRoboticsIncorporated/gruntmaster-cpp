@@ -6,7 +6,6 @@
 class ShooterFire: public CommandBase {
     public:
         ShooterFire();
-        ~ShooterFire();
     protected:
         void Initialize();
         void Execute();

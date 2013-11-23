@@ -6,11 +6,10 @@
 class OpenTopServo: public CommandBase {
 	public:
 		OpenTopServo();
-		~OpenTopServo();
+	protected:
 		void Initialize();
 		void Execute();        
 		bool IsFinished();        
-	protected:
 		void End();        
 		void Interrupted();
 	private:

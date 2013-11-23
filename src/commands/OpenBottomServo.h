@@ -6,11 +6,10 @@
 class OpenBottomServo: public CommandBase {
 	public:
 		OpenBottomServo();
-		~OpenBottomServo();
+	protected:
 		void Initialize();
 		void Execute();        
 		bool IsFinished();        
-	protected:
 		void End();        
 		void Interrupted();
 	private:

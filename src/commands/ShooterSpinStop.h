@@ -6,11 +6,10 @@
 class ShooterSpinStop: public CommandBase {
 	public:
 		ShooterSpinStop();
-		~ShooterSpinStop();
+	protected:
 		void Initialize();
 		void Execute();
 		bool IsFinished();
-	protected:
 		void End();
 		void Interrupted();
 	private:

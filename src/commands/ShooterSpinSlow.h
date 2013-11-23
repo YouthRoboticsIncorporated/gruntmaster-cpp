@@ -6,11 +6,10 @@
 class ShooterSpinSlow: public CommandBase {
 	public:
 		ShooterSpinSlow();
-		~ShooterSpinSlow();
+	protected:
 		void Initialize();
 		void Execute();
 		bool IsFinished();
-	protected:
 		void End();
 		void Interrupted();
 	private:
