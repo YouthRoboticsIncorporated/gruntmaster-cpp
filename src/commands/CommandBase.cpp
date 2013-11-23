@@ -23,7 +23,7 @@ void CommandBase::setup() {
     robotMap = new RobotMap();
     chassis = new Chassis();
     firingPin = new FiringPin(robotMap);
-    shooter = new Shooter(robotMap);
+    shooter = new Shooter();
     topServo = new TopServo();
     bottomServo = new BottomServo();
 }

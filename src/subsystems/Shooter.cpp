@@ -5,11 +5,12 @@
 
 #include "Shooter.h"
 
-Shooter::Shooter(RobotMap* robot_map_):
-    Subsystem("Shooter"),
-    m_Front(robot_map_->shooterMotorFront),
-    m_Back(robot_map_->shooterMotorBack)
-{}
+Shooter::Shooter():
+    Subsystem("Shooter")
+{
+    m_Front = RobotMap::shooterMotorFront;
+    m_Back = RobotMap::shooterMotorBack;
+}
 
 void Shooter::stop()
 {

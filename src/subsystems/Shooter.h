@@ -7,8 +7,7 @@
 
 class Shooter:public Subsystem {
     public:
-        Shooter(RobotMap*); // Constructor
-        ~Shooter(); // Destructor
+        Shooter(); // Constructor
         // Methods
         void stop();
         void slow();
@@ -17,8 +16,8 @@ class Shooter:public Subsystem {
     
     private:
         // Motor controllers
-        SpeedController* const m_Front;
-        SpeedController* const m_Back;
+        SpeedController* m_Front;
+        SpeedController* m_Back;
 
 };
 
