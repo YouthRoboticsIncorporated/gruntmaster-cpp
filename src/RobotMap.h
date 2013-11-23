@@ -13,8 +13,8 @@
 class RobotMap {
     public:
         // Methods
-        RobotMap(); // Constructor
-        ~RobotMap(); // Destructor
+        static void init();
+        
         // Members
         // Joysticks
         static Joystick* joyDrv;
@@ -60,7 +60,8 @@ class RobotMap {
         static DigitalInput* firePinMin;
     
     private:
-        // No private members    
+        RobotMap(); // Constructor
+        ~RobotMap(); // Destructor
 };
 
 #endif

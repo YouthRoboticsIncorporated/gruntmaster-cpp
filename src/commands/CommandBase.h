@@ -16,12 +16,11 @@ class CommandBase: public Command {
         CommandBase();
         CommandBase(const char *name);
         ~CommandBase();
-        
+
         // Methods
         static void init();
         
         // Members
-        static RobotMap* robotMap;
         // Subsystems
         static BottomServo* bottomServo;
         static Chassis* chassis;
@@ -29,10 +28,6 @@ class CommandBase: public Command {
         static Shooter* shooter;
         static TopServo* topServo;
         static OI* oi;
-    
-    private:
-        void setup();
-        
 };
 
 #endif

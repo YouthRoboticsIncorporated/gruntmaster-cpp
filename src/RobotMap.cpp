@@ -8,7 +8,7 @@
 #include "RobotMap.h"
 
 // Initialise all of the peripherals
-RobotMap::RobotMap() {
+void RobotMap::init() {
     // Joysticks
     joyDrv = new Joystick(1);
     joyOpr = new Joystick(2);
@@ -47,23 +47,4 @@ RobotMap::RobotMap() {
     firePinMax = new DigitalInput(8);
     firePinMin = new DigitalInput(7);
 
-}
-
-RobotMap::~RobotMap() {
-    // Delete all of the instances of our peripherals
-    delete joyDrv;
-    delete joyOpr;
-    delete fireButton;
-    delete slowButton;
-    delete fastButton;
-    delete stopButton;
-    delete topButton;
-    delete bottomButton;
-    delete firePinMotor;
-    delete shooterMotorFront;
-    delete shooterMotorBack;
-    delete hopperServoTop;
-    delete hopperServoBottom;
-    delete firePinMax;
-    delete firePinMin;
 }

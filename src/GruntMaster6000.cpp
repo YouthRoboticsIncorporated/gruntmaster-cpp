@@ -2,41 +2,46 @@
 
 #include "commands/AutonomousCommandGroup.h"
 
-GruntMaster6000 :: GruntMaster6000():
-	IterativeRobot ()
-{
-}
+GruntMaster6000::GruntMaster6000():
+    IterativeRobot ()
+{}
 
-void GruntMaster6000 :: RobotInit()
+void GruntMaster6000::RobotInit()
 {
-	// instantiate the command used for the autonomous period
-	autonomousCommand = new AutonomousCommandGroup;
-
-	// Initialize all subsystems
+    // Initialize all subsystems
     CommandBase::init();
+    
+    // Smart Dashboard
+    SmartDashboard::PutData("SchedulerData",Scheduler::GetInstance());
+    SmartDashboard::PutData(CommandBase::chassis);
+    SmartDashboard::PutData(CommandBase::firingPin);
+    SmartDashboard::PutData(CommandBase::shooter);
+    
+    // instantiate the command used for the autonomous period
+    autonomousCommand = new AutonomousCommandGroup();
 }
   
-void GruntMaster6000 :: AutonomousInit()
+void GruntMaster6000::AutonomousInit()
 {
-	autonomousCommand->Start();
+    //autonomousCommand->Start();
 }
 
-void GruntMaster6000 :: AutonomousPeriodic()
+void GruntMaster6000::AutonomousPeriodic()
 {
-	Scheduler::GetInstance()->Run();
+    Scheduler::GetInstance()->Run();
 }
 
-void GruntMaster6000 :: TeleopInit()
+void GruntMaster6000::TeleopInit()
 {
     autonomousCommand->Cancel();
 } // public void teleopInit()
   
-void GruntMaster6000 :: TeleopPeriodic()
+void GruntMaster6000::TeleopPeriodic()
 {
     Scheduler::GetInstance()->Run();
 } // public void operatorControl() 
 
-void GruntMaster6000 :: TestPeriodic()
+void GruntMaster6000::TestPeriodic()
 {
     LiveWindow::GetInstance()->Run();
 } // public void testPeriodic()
