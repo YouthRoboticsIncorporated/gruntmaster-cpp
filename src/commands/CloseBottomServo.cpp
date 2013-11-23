@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "CloseBottomServo.h"
 
 CloseBottomServo :: CloseBottomServo() : CommandBase("CloseBottomServo") {
