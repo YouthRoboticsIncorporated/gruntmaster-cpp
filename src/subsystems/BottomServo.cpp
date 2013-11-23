@@ -1,12 +1,11 @@
 #include "BottomServo.h"
 
-BottomServo::BottomServo(RobotMap* robot_map_):
-	Subsystem("BottomServo"),
-	m_hopperServoBottom(robot_map_->hopperServoBottom)
-{close();}
-	
-    
-    
+BottomServo::BottomServo():
+	Subsystem("BottomServo")
+{
+ 	m_hopperServoBottom = RobotMap::hopperServoBottom;
+    close();
+}
     
 void BottomServo::open()
 {

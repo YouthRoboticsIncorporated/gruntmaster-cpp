@@ -7,15 +7,14 @@
 
 class BottomServo: public Subsystem {
 	public:
-		BottomServo(RobotMap*); // Constructor
-        ~BottomServo(); // Destructor
+		BottomServo(); // Constructor
         // Methods
-        void open() ;
-        void close () ;
-        void InitDefaultCommand() ;
+        void open();
+        void close();
+        void InitDefaultCommand();
         
     private:
-		Servo* const m_hopperServoBottom;
+		Servo* m_hopperServoBottom;
 		
 };
 

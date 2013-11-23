@@ -25,5 +25,5 @@ void CommandBase::setup() {
     firingPin = new FiringPin(robotMap);
     shooter = new Shooter(robotMap);
     topServo = new TopServo(robotMap);
-    bottomServo = new BottomServo(robotMap);
+    bottomServo = new BottomServo();
 }
