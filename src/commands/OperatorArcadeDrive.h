@@ -8,9 +8,12 @@ class OperatorArcadeDrive: public CommandBase
 {
     public:
         OperatorArcadeDrive();
-        void Execute();
-        bool IsFinished();
-        void Interrupted();
+	protected:
+		void Initialize();
+		void Execute();        
+		bool IsFinished();        
+		void End();        
+		void Interrupted();
     private:
 };
 

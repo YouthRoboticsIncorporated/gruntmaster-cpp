@@ -45,6 +45,10 @@ class RobotMap {
         static Victor* firePinMotor;
         static Victor* shooterMotorFront;
         static Victor* shooterMotorBack;
+        // Drive motors
+        static Victor* driveMotorA;
+        static Victor* driveMotorB;
+        static Victor* driveMotorC;
   
         // Hopper servos
         static Servo* hopperServoTop;

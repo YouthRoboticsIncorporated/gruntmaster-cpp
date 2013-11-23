@@ -10,22 +10,17 @@
 #include "Chassis.h"
 #include "../commands/OperatorArcadeDrive.h"
 
-Chassis::Chassis():Subsystem("Chassis"),
-    driveMotorA(new Victor(1)),
-    driveMotorB(new Victor(2)),
-    driveMotorC(new Victor(3))
-{}
-
-Chassis::~Chassis() {
-    delete driveMotorA;
-    delete driveMotorB;
-    delete driveMotorC;
+Chassis::Chassis():Subsystem("Chassis")
+{
+    driveMotorA = RobotMap::driveMotorA;
+    driveMotorB = RobotMap::driveMotorB;
+    driveMotorC = RobotMap::driveMotorC;
 }
 
 void Chassis::InitDefaultCommand() {
     // TODO - This was ported from the Java version.
     // Is it actually necessary? - JRW
-    //SetDefaultCommand(new OperatorArcadeDrive());
+    SetDefaultCommand(new OperatorArcadeDrive());
 }
   
 /**

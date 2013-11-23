@@ -16,7 +16,6 @@
 class Chassis:public Subsystem {
     public:
         Chassis(); // Constructor
-        ~Chassis(); // Destructor
         // Methods
         void InitDefaultCommand();
         void drive(double vX, double vY, double vR, double throttle);
@@ -25,9 +24,9 @@ class Chassis:public Subsystem {
         // Mathematical transformations
         static double limit(double num);
         // Drive motors
-        Victor* const driveMotorA;
-        Victor* const driveMotorB;
-        Victor* const driveMotorC;
+        Victor* driveMotorA;
+        Victor* driveMotorB;
+        Victor* driveMotorC;
 };
 
 

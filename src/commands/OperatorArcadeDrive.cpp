@@ -18,6 +18,12 @@ bool OperatorArcadeDrive::IsFinished()
     return false;
 }
 
+void OperatorArcadeDrive::Initialize()
+{}
+
+void OperatorArcadeDrive::End()
+{}
+
 void OperatorArcadeDrive::Interrupted()
 {
     End();

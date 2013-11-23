@@ -28,10 +28,15 @@ RobotMap::RobotMap() {
     stopButton = new JoystickButton(joyOpr, 1);
     topButton = new JoystickButton(joyOpr, 4);
     bottomButton = new JoystickButton(joyOpr, 2);
+    
     // Shooter motors
     firePinMotor = new Victor(5);
     shooterMotorFront = new Victor(4);
     shooterMotorBack = new Victor(6);
+    // Drive motors
+    driveMotorA = new Victor(1);
+    driveMotorB = new Victor(2);
+    driveMotorC = new Victor(3);
 
     // Hopper servos
     hopperServoTop = new Servo(8);
