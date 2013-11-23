@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "OperatorArcadeDrive.h"
 
 OperatorArcadeDrive::OperatorArcadeDrive()
@@ -9,7 +7,6 @@ OperatorArcadeDrive::OperatorArcadeDrive()
 
 void OperatorArcadeDrive::Execute()
 {
-    std::cout << "Drive " << oi->getJoyDrvX() << "," << oi->getJoyDrvY() << "," << oi->getJoyDrvThrottle();
     chassis->drive(oi->getJoyDrvX(), oi->getJoyDrvY(), 0, oi->getJoyDrvThrottle() );
 }
 

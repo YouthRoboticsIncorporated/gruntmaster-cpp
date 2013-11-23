@@ -1,11 +1,12 @@
-#include <iostream>
-
 #include "ShooterSpinSlow.h"
 
-ShooterSpinSlow :: ShooterSpinSlow() : CommandBase("ShooterSpinSlow") {
+ShooterSpinSlow::ShooterSpinSlow(): CommandBase("ShooterSpinSlow")
+{
 	Requires(shooter);
 }
-void ShooterSpinSlow::Initialize() {
+
+void ShooterSpinSlow::Initialize()
+{
     finished = false;
 }
 
@@ -20,10 +21,8 @@ bool ShooterSpinSlow::IsFinished()
     return finished;
 } 
 
-void ShooterSpinSlow::End() {
+void ShooterSpinSlow::End()
+{}
 
-}
-
-void ShooterSpinSlow::Interrupted() {
-
-}
+void ShooterSpinSlow::Interrupted()
+{}

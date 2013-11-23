@@ -1,19 +1,18 @@
-#include <iostream>
-
 #include "OpenTopServo.h"
 
-OpenTopServo :: OpenTopServo() : CommandBase("OpenTopServo") {
+OpenTopServo::OpenTopServo(): CommandBase("OpenTopServo")
+{
 	Requires(topServo);
 }
 
-void OpenTopServo :: Initialize() {
-finished = false;
+void OpenTopServo::Initialize() {
+    finished = false;
 }
 
-void OpenTopServo :: Execute() 
+void OpenTopServo::Execute() 
 {
-topServo->open (); 
-finished = true;
+    topServo->open (); 
+    finished = true;
 }
 
 bool OpenTopServo::IsFinished()
@@ -22,11 +21,7 @@ bool OpenTopServo::IsFinished()
 }
 
 void OpenTopServo::End()
-{
-
-}
+{}
 
 void OpenTopServo::Interrupted()
-{
-
-}
+{}
