@@ -1,12 +1,11 @@
 #include "TopServo.h"
 
-TopServo::TopServo(RobotMap* robot_map_):
-	Subsystem("TopServo"),
-	m_hopperServoTop(robot_map_->hopperServoTop)
-{close();}
-	
-    
-    
+TopServo::TopServo():
+	Subsystem("TopServo")
+{
+	m_hopperServoTop = RobotMap::hopperServoTop;
+    close();
+}
     
 void TopServo::open()
 {
@@ -20,5 +19,5 @@ void TopServo::close()
 
 void TopServo::InitDefaultCommand()
 {
-   
+
 }

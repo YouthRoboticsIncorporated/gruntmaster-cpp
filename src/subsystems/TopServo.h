@@ -7,15 +7,14 @@
 
 class TopServo: public Subsystem {
 	public:
-		TopServo(RobotMap*); // Constructor
-        ~TopServo(); // Destructor
+		TopServo(); // Constructor
         // Methods
         void open() ;
         void close () ;
         void InitDefaultCommand() ;
         
     private:
-		Servo* const m_hopperServoTop;
+		Servo* m_hopperServoTop;
 		
 };
 
